@@ -23,8 +23,16 @@ st.pyplot(fig_corr)
 
 # Histogramme
 fig_hist = plt.figure(figsize=(10, 8))
-df_cars.hist()
-plt.suptitle('Histogrammes des variables', x=0.5, y=0.92)
+df_cars.hist(color='skyblue', edgecolor='black', linewidth=1.5, grid=False)
+plt.suptitle('Histogrammes des variables', x=0.5, y=0.95, fontsize=16, color='black', fontweight='bold')
+plt.xlabel('Valeurs', fontsize=14, color='black', fontweight='bold')
+plt.ylabel('Fréquence', fontsize=14, color='black', fontweight='bold')
+plt.xticks(fontsize=12, color='black')
+plt.yticks(fontsize=12, color='black')
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.gca().spines['bottom'].set_color('black')
+plt.gca().spines['left'].set_color('black')
 st.pyplot(fig_hist)
 
 # Relation entre variables
